@@ -1,2 +1,0 @@
-class Blend < ApplicationRecord
-end
