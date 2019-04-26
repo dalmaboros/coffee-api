@@ -1,3 +1,3 @@
 class ProcessingMethod < ApplicationRecord
-  has_and_belongs_to_many :coffees
+  has_many :coffees, :through => :coffee_processing_methods
 end

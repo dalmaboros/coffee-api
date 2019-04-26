@@ -1,3 +1,3 @@
 class Shop < ApplicationRecord
-  has_and_belongs_to_many :coffees
+  has_many :coffees, :through => :offerings
 end
