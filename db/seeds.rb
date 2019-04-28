@@ -14,8 +14,8 @@
 # CoffeeOrigin.create(name: "")
 
 # Application Seeds
-Shop.create(name: "Cherry Espresso Bar", hours: "6:30-17:00 Mo-Fr, 7:00-17:00 Sa-Su", address: "4877 Laurel St, New Orleans, LA 70115", coordinates: "29.9183317, 90.1101652")
-Shop.create(name: "Cherry Coffee Roasters", hours: "7-17:00 Mo-Su", address: "1581 Magazine St, New Orleans, LA 70130", coordinates: "29.9328293, 90.0752705")
+Shop.create(name: "Cherry Espresso Bar", hours: "6:30-17:00 Mo-Fr, 7:00-17:00 Sa-Su", address: "4877 Laurel St, New Orleans, LA 70115", coordinates: "29.9183317, 90.1101652", coffee_ids: {})
+Shop.create(name: "Cherry Coffee Roasters", hours: "7-17:00 Mo-Su", address: "1581 Magazine St, New Orleans, LA 70130", coordinates: "29.9328293, 90.0752705", coffee_ids: {})
 
 Origin.create(continent: "Africa", country: "Ethiopia", state: "Southern Nations, Nationalities, and Peoples' Region", zone: "Sidama", region: "Bensa", village: "Keramo")
 ProcessingMethod.create(name: "fully washed", description: "")
