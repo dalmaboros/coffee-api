@@ -26,6 +26,9 @@ Variety.create(name: "Setami", description: "")
 Flavor.create(name: "date", description: "", tier: 3)
 Flavor.create(name: "peach", description: "The floral, perfuming, fruity, sweet, slightly sour aromatic associated with peaches", tier: 3)
 Flavor.create(name: "black tea", description: "A somewhat brown, musty, dried plant and dried bark aromatic associated with the oxidization of tea leaves.", tier: 2)
+Flavor.create(name: "passion fruit", description: "", tier: 3)
+Flavor.create(name: "honey", description: "Sweet, light brown, slightly spicy aromatic associated with honey.", tier: 3)
+Flavor.create(name: "bergamot", description: "", tier: 3)
 
 # Coffee.create(name: "Keramo", description: "", roaster: "Roseline", producer: "Multiple small farms surrounding the Keramo mill", washing_station: "Bombe Washing Station", min_altitude: 2400, max_altitude: , season_start: "", season_end: "")
 
