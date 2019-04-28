@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Templates
+Shop.create(name: "", hours: "", address: "", coordinates: "")
+Coffee.create(name: "", description: "", roaster: "", producer: "", washing_station: "", min_altitude: , max_altitude: , season_start: "", season_end: "")
+Flavor.create(name: "", decription: "", tier: )
+Variety.create(name: "", description: "")
+ProcessingMethod.create(name: "", description: "")
+Origin.create(continent: "", country: "", state: "", region: "")
+
+# Association Templates (did I mess this up by giving them all name attributes? lol)
+Offering.create(name: "")
+CoffeeFlavor.create(name: "")
+CoffeeVariety.create(name: "")
+CoffeeProcessingMethod.create(name: "")
+CoffeeOrigin.create(name: "")
+
+# Load the data with `rails db:seed`
