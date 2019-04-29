@@ -30,6 +30,21 @@ Flavor.create(name: "passion fruit", description: "", tier: 3)
 Flavor.create(name: "honey", description: "Sweet, light brown, slightly spicy aromatic associated with honey.", tier: 3)
 Flavor.create(name: "bergamot", description: "", tier: 3)
 
-# Coffee.create(name: "Keramo", description: "", roaster: "Roseline", producer: "Multiple small farms surrounding the Keramo mill", washing_station: "Bombe Washing Station", min_altitude: 2400, max_altitude: , season_start: "", season_end: "")
+Coffee.create(
+  name: "Keramo",
+  description: "",
+  roaster: "Roseline",
+  producer: "Multiple small farms surrounding the Keramo mill",
+  washing_station: "Bombe Washing Station",
+  min_altitude: 2400,
+  max_altitude: 0,
+  season_start: "",
+  season_end: "",
+  shop_ids: [1],
+  processing_method_ids: [1, 2],
+  variety_ids: [1, 2, 3],
+  flavor_ids: [1, 2, 3, 4, 5, 6],
+  origin_ids: [1]
+)
 
 # Load the data with `rake db:seed` or `rails db:seed`
