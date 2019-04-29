@@ -26,6 +26,7 @@ class ShopsContainer extends Component {
   render () {
     return (
       <div className="shops-container">
+      <h2 className="App-title">Coffee Shops</h2>
         {this.state.shops.map( shop => {
           return (<Shop shop={shop} key={shop.id} />)
         })}
