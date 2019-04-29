@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import ShopsContainer from './components/ShopsContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header>
+          <h1 className="App-title">Coffee App</h1>
+        </header>
+        Here we are in App.js. We will want to display a list (index) of shops:
+        " ShopsContainer shops=somelist"
+        <ShopsContainer />
+      </div>
+    )
+  }
 }
 
 export default App;
