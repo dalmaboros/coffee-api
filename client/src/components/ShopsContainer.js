@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CoffeesContainer extends Component {
+class ShopsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,16 +9,15 @@ class CoffeesContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/shops.json', {
-      headers: {
-        "accepts": "application/json"
-      }
+    fetch('/api/v1/shops', {
+      accept: 'application/json',
     })
-      .then(response => {
-        console.log(response);
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
         this.setState({
-          shops: response.data
-        });
+          shops: json
+        })
       })
       .catch(error => console.log(error))
   }
@@ -33,4 +32,4 @@ class CoffeesContainer extends Component {
   }
 }
 
-export default CoffeesContainer;
+export default ShopsContainer;
