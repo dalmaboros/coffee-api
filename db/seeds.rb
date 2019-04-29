@@ -47,4 +47,28 @@ Coffee.create(
   origin_ids: [1]
 )
 
+ProcessingMethod.create(name: "controlled yeast fermentation", description: "")
+Variety.create(name: "Red Bourbon", description: "")
+Flavor.create(name: "cherry", description: "The sour, fruity, slightly bitter, floral aromatic associated with cherries.", tier: 3)
+Flavor.create(name: "mandarin", description: "", tier: 3)
+Flavor.create(name: "assam", description: "", tier: 3)
+Origin.create(continent: "Africa", country: "Burundi", province: "Kayanza", commune: "Kayanza", region: "Kibingo")
+
+Coffee.create(
+  name: "Kibingo",
+  description: "",
+  roaster: "Sweet Bloom",
+  producer: "Various",
+  washing_station: "Kibingo",
+  min_altitude: 1892,
+  max_altitude: 1892,
+  season_start: "",
+  season_end: "",
+  shop_ids: [1],
+  processing_method_ids: [3],
+  variety_ids: [4],
+  flavor_ids: [7, 8, 9],
+  origin_ids: [2]
+)
+
 # Load the data with `rake db:seed` or `rails db:seed`
