@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Shop from './Shop';
 
 class ShopsContainer extends Component {
   constructor(props) {
@@ -24,9 +25,10 @@ class ShopsContainer extends Component {
 
   render () {
     return (
-      <div className="Lists-container">
-        Here we are in the ShopsContainer. We want to render each shop below:<br />
-        "Shop /"
+      <div className="shops-container">
+        {this.state.shops.map( shop => {
+          return (<Shop shop={shop} key={shop.id} />)
+        })}
       </div>
     )
   }
