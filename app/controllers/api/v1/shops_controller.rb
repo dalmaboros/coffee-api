@@ -6,12 +6,12 @@ module Api::V1
     def index
       @shops = Shop.order(:id)
 
-      render json: @shops
+      render json: @shops, :include => [:coffees]
     end
 
     # GET /shops/1
     def show
-      render json: @shop
+      render json: @shop, :include => [:coffees]
     end
 
     # POST /shops
