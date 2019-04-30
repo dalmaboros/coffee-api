@@ -10,7 +10,7 @@ module Api::V1
         @coffees = Coffee.order(:id)
       end
 
-      render json: @coffees
+      render json: @coffees, :include => [:flavors, :varieties, :processing_methods, :origins]
     end
 
     # GET /coffees/1

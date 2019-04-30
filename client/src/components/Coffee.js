@@ -9,6 +9,11 @@ const Coffee = ({coffee}) =>
       <b>Washing Station</b>: {coffee.washing_station}<br/>
       <b>Altitude</b>: {coffee.min_altitude}<br/>
       <br/>
+      <b>Flavors</b>:
+      {coffee.flavors.map((flavor, index) => {
+        return (index ? ', ' : '') + " " + flavor.name
+      })}
+
     </div>
 
 export default Coffee;
