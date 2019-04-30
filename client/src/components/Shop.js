@@ -15,12 +15,11 @@ class Shop extends Component {
     })
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         this.setState({
           coffees: json
         })
       })
-      .catch(error => console.log(error))
+      .catch(error => alert(error))
   }
 
   render () {

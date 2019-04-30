@@ -61,7 +61,7 @@ ReactDOM.render((
     <React.Fragment>
       <Navbar />
       <Route exact path="/" component={App} />
-      <Route exact path="/shops" component={ShopsContainer} />
+      <Route path='/shops' component={ShopsContainer} />
     </React.Fragment>
   </Router>),
   document.getElementById('root')
