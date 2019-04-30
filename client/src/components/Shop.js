@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Coffee from './Coffee'
 
-const Shop = ({shop}) =>
-    <div className="single-shop" key={shop.id}>
-        <h3>{shop.name}</h3>
-        <p>{shop.hours}</p>
+class Shop extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      coffees: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch(`/api/v1/shops/${this.props.shop.id}/coffees`, {
+      accept: 'application/json',
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        this.setState({
+          coffees: json
+        })
+      })
+      .catch(error => console.log(error))
+  }
+
+  render () {
+    return (
+      <div className="single-shop" key={this.props.shop.id}>
+        <h3>{this.props.shop.name}</h3>
         <div>
-          {shop.coffees.map(coffee => {
+          {this.state.coffees.map(coffee => {
             return(
               <Coffee coffee={coffee} key={coffee.id} />
             )
           })}
-          </div>
-    </div>
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Shop;

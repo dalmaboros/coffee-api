@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :shops
+      resources :shops do
+        resources :coffees
+      end
       resources :coffees
-      
+
       resources :flavors
       resources :varieties
       resources :processing_methods

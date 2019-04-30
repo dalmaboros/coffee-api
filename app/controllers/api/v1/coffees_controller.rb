@@ -4,7 +4,11 @@ module Api::V1
 
     # GET /coffees
     def index
-      @coffees = Coffee.order(:id)
+      if params[:shop_id]
+        @coffees = Shop.find(params[:shop_id]).coffees
+      else
+        @coffees = Coffee.order(:id)
+      end
 
       render json: @coffees
     end
