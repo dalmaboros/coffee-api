@@ -17,15 +17,12 @@
 Shop.create(name: "Cherry Espresso Bar", hours: "6:30-17:00 Mo-Fr, 7:00-17:00 Sa-Su", address: "4877 Laurel St, New Orleans, LA 70115", coordinates: "29.9183317, 90.1101652", coffee_ids: {})
 Shop.create(name: "Cherry Coffee Roasters", hours: "7-17:00 Mo-Su", address: "1581 Magazine St, New Orleans, LA 70130", coordinates: "29.9328293, 90.0752705", coffee_ids: {})
 
-Origin.create(continent: "Africa", country: "Ethiopia", state: "Southern Nations, Nationalities, and Peoples' Region", zone: "Sidama", region: "Bensa", village: "Keramo")
+Origin.create(continent: "Africa", country: "Ethiopia", state: "Southern Nations, Nationalities, and Peoples' Region", zone: "Sidama", district: "Bensa", region: "Keramo")
 ProcessingMethod.create(name: "fully washed", description: "")
 ProcessingMethod.create(name: "screen size 13 separation", description: "")
 Variety.create(name: "74/158", description: "")
 Variety.create(name: "74/110", description: "")
 Variety.create(name: "Setami", description: "")
-Flavor.create(name: "date", description: "", tier: 3)
-Flavor.create(name: "peach", description: "The floral, perfuming, fruity, sweet, slightly sour aromatic associated with peaches", tier: 3)
-Flavor.create(name: "black tea", description: "A somewhat brown, musty, dried plant and dried bark aromatic associated with the oxidization of tea leaves.", tier: 2)
 Flavor.create(name: "passion fruit", description: "", tier: 3)
 Flavor.create(name: "honey", description: "Sweet, light brown, slightly spicy aromatic associated with honey.", tier: 3)
 Flavor.create(name: "bergamot", description: "", tier: 3)
@@ -43,7 +40,7 @@ Coffee.create(
   shop_ids: [1],
   processing_method_ids: [1, 2],
   variety_ids: [1, 2, 3],
-  flavor_ids: [1, 2, 3, 4, 5, 6],
+  flavor_ids: [1,2,3],
   origin_ids: [1]
 )
 
@@ -67,7 +64,7 @@ Coffee.create(
   shop_ids: [1],
   processing_method_ids: [3],
   variety_ids: [4],
-  flavor_ids: [7, 8, 9],
+  flavor_ids: [4,5,6],
   origin_ids: [2]
 )
 

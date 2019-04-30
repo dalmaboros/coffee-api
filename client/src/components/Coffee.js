@@ -13,6 +13,21 @@ const Coffee = ({coffee}) =>
       {coffee.flavors.map((flavor, index) => {
         return (index ? ', ' : '') + " " + flavor.name
       })}
+      <br/>
+      <b>Varieties</b>:
+      {coffee.varieties.map((variety, index) => {
+        return (index ? ', ' : '') + " " + variety.name
+      })}
+      <br/>
+      <b>Processing</b>:
+      {coffee.processing_methods.map((processing_method, index) => {
+        return (index ? ', ' : '') + " " + processing_method.name
+      })}
+      <br/>
+      <b>Origin</b>:
+      {coffee.origins.map((origin, index) => {
+        return (index ? ', ' : '') + " " + origin.region
+      })}
 
     </div>
 

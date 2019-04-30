@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_29_132639) do
+ActiveRecord::Schema.define(version: 2019_04_30_113727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_132639) do
     t.string "village"
     t.string "province"
     t.string "commune"
+    t.string "district"
   end
 
   create_table "processing_methods", force: :cascade do |t|
