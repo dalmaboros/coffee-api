@@ -5,6 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import ShopsContainer from './components/ShopsContainer';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import shopsReducer from './reducers/shopsReducer.js';
+
+const store = createStore(shopsReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 /* Add basic styling for NavLinks */
 const link = {
@@ -56,16 +61,20 @@ const Navbar = () =>
     >Login</NavLink>
   </div>;
 
-ReactDOM.render((
-  <Router>
-    <React.Fragment>
-      <Navbar />
-      <Route exact path="/" component={App} />
-      <Route path='/shops' component={ShopsContainer} />
-    </React.Fragment>
-  </Router>),
-  document.getElementById('root')
-);
+  ReactDOM.render(
+    <Provider store={store}>
+      {' '}
+      (
+        <Router>
+          <React.Fragment>
+            <Navbar />
+            <Route exact path="/" component={App} />
+            <Route path='/shops' component={ShopsContainer} />
+          </React.Fragment>
+        </Router>)
+    </Provider>,
+    document.getElementById('root')
+  );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
